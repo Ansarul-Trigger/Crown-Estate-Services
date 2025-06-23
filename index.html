@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crown Estate Services – Exceptional Property Management, Tailored to You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      max-width: 1720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+/* header section */
+ .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .top-bar {
+      background-color: rgba(0, 0, 0, 1);
+      color: #E6D5AB;
+      font-size: 13px;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .top-bar i {
+      margin-right: 5px;
+    }
+
+    .main-header {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+    }
+
+    .logo {
+  transition: transform 0.3s ease, padding 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Controls header height */
+}
+
+.logo img {
+  height: 100%;
+  max-height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Shrink logo on scroll */
+.shrink .logo img {
+  transform: scale(0.85);
+}
+
+.nav-desktop a{
+  text-decoration: none;
+  color: #E6D5AB;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .logo {
+    height: 50px;
+  }
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  .shrink .logo img {
+    transform: scale(0.8);
+  }
+}
+
+
+    .shrink .logo {
+      transform: scale(0.85);
+    }
+
+    .nav-desktop {
+      display: flex;
+      gap: 30px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    .nav-desktop > div {
+      position: relative;
+      color: #222;
+      cursor: pointer;
+    }
+
+
+    .mobile-icons {
+      display: none;
+      gap: 20px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* 📱 Mobile Styles */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+      z-index: 9999;
+      overflow-y: auto;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .mobile-menu-header {
+      background-color: #e6d5ab;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .mobile-menu .menu-item {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu .menu-title {
+      padding: 14px 20px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+
+    .menu-title a{
+      color: #e6d5ab;
+      text-decoration: none;
+    }
+
+
+    @media (max-width: 768px) {
+      .nav-desktop {
+        display: none;
+      }
+
+      .mobile-icons {
+        display: flex;
+      }
+
+      .main-header {
+        padding: 14px 20px;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+    }
+
+
+
+
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      margin-top: -166px;
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 10;
+      animation: fadeInUp 1.5s ease-out;
+      background-color: rgba(0,0,0,0.5);
+      padding: 30px 30px 30px 30px;
+    }
+    .hero-overlay h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px;
+      line-height: 50px;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      color: #E6D5AB;
+    }
+    .hero-overlay p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+   
+    .booking-box {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 20;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .booking-box input[type="text"], .jump-input {
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      width: 150px;
+    }
+    .booking-box button {
+      background-color: #e6d5ab;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .search-icon {
+      background: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    @media (max-width: 1024px) {
+      .hero-overlay h1 { font-size: 36px; }
+      .hero-overlay p { font-size: 18px; }
+    }
+    @media (max-width: 768px) {
+      nav.desktop-nav { display: none; }
+      .menu-toggle { display: flex; }
+      .hero-overlay h1 { font-size: 28px; }
+      .hero-overlay p { font-size: 16px; }
+      .hero-overlay .buttons { flex-direction: column; }
+      .booking-box { flex-direction: column; align-items: stretch; }
+      .booking-box input, .jump-input, .booking-box button, .search-icon {
+        width: 100%;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-overlay h1 { font-size: 22px; }
+      .hero-overlay p { font-size: 14px; }
+    }
+
+
+/* Mission section */
+
+.mission-section {
+  padding: 80px 20px;
+  background-color: #000;
+}
+
+.mission-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mission-text {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.mission-text h2 {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  color: #E6D5AB;
+  margin-bottom: 20px;
+}
+
+.mission-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.mission-text ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.mission-text ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.mission-image {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInRight 1s ease-out;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mission-inner {
+    flex-direction: column;
+  }
+  .mission-text h2 {
+    font-size: 28px;
+  }
+  .mission-text p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* people section */
+
+.people-section {
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/bag-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #E6D5AB;
+ 
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.person-card {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.person-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #e6d5ab;
+}
+
+.person-card h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.person-card .role {
+  font-size: 14px;
+  color: #e6d5ab;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.person-card .bio {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+    /* service section */
+.services-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)),
+              url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+}
+
+
+.services-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.services-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #E6D5AB;
+}
+
+.services-header p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.7;
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #e6d5ab;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.service-card ul li::before {
+  content: "✓";
+  color: #e6d5ab;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.services-footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* why choose us section */
+
+
+.choose-us-section {
+  background: #000;
+  padding: 100px 20px;
+}
+
+.choose-header {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.choose-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #E6D5AB;
+  margin-bottom: 20px;
+}
+
+.choose-intro {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.choose-item {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.choose-item:hover {
+  transform: translateY(-5px);
+}
+
+.choose-item h3 {
+  font-size: 20px;
+  color: #e6d5ab;
+  margin-bottom: 12px;
+}
+
+.choose-item p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* What Our Guests Say */
+.testimonials-section {
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/bag-2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.testimonials-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e6d5ab;
+  margin: 8px auto 0;
+}
+
+.owl-carousel .owl-stage {
+  padding: 0 0px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin: 0 10px;
+}
+
+.testimonial-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: #c59d5f;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: bold;
+  color: #000;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+  font-size: 30px;
+  color: #e6d5ab;
+}
+
+.owl-dots { margin-top: 20px; }
+.owl-dot span {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+}
+.owl-dot.active span {
+  background: #e6d5ab;
+}
+
+
+/* connect section */
+.connect-section {
+  background: #f9f9f9;
+  padding: 100px 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.connect-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: start;
+}
+
+.connect-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #e6d5ab;
+  margin-bottom: 20px;
+}
+
+.connect-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.contact-info a {
+  color: #e6d5ab;
+  text-decoration: none;
+}
+
+.connect-form form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.connect-form input,
+.connect-form textarea {
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.connect-form button {
+  background-color: #e6d5ab;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connect-form button:hover {
+  background-color: #704f29;
+}
+
+
+
+  /* footer section */
+.site-footer {
+  background: #1c1a18;
+  color: #eee;
+  font-family: 'Open Sans', sans-serif;
+  padding: 60px 20px 30px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.footer-col h3 span {
+  font-size: 14px;
+  color: #c9a960;
+  letter-spacing: 1px;
+}
+
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #c9a960;
+}
+
+.footer-col p {
+  margin: 10px 0;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-buttons button {
+  display: block;
+  width: 130px;
+  background-color: #c9a960;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: #c9a960;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.vrma-logo {
+  margin-top: 20px;
+  max-width: 120px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-logo {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+/* scroll-top */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  background-color: #e6d5ab;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: rgba(230, 213, 171, 0.7);
+  transform: translateY(-3px);
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+}
+
+
+  </style>
+</head>
+<body>
+ 
+  
+  <header class="sticky-header" id="header">
+    <div class="top-bar">
+      <i class="fas fa-phone"></i> 512-501-3580
+    </div>
+
+    <div class="main-header">
+      <div class="logo" id="logo">
+        <img src="image/logo-removebg-preview.png" alt="">
+      </div>
+
+      <div class="nav-desktop">
+        <div>
+          <a href="index.html">HOME</a>
+        </div>
+        <div>
+          <a href="#mission">MISSION</a>
+        </div>
+        <div>
+          <a href="#team">ABOUT</a>
+        </div>
+        <div>
+          <a href="#service">SERVICES</a>
+        </div>
+         <div>
+           <a href="#why-chose-us">WHY CHOOSE US</a>
+        </div>
+         <div>
+           <a href="#connect">CONNECT</a>
+        </div>
+      </div>
+
+      <div class="mobile-icons" onclick="toggleMobileMenu()">
+        <i class="fas fa-phone"></i>
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header" onclick="toggleMobileMenu()">← Close Menu</div>
+
+    <div class="menu-item">
+      <div class="menu-title" onclick="toggleSubmenu(this)">   <a href="index.html">HOME</a></div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-title" onclick="toggleSubmenu(this)"><a href="#mission">MISSION</a></div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-title" onclick="toggleSubmenu(this)"> <a href="#team">ABOUT</a></div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-title" onclick="toggleSubmenu(this)"><a href="#service">SERVICES</a></div>
+    </div>
+
+     <div class="menu-item">
+      <div class="menu-title" onclick="toggleSubmenu(this)"><a href="#why-chose-us">WHY CHOOSE US</a></div>
+    </div>
+
+     <div class="menu-item">
+      <div class="menu-title" onclick="toggleSubmenu(this)"><a href="#connect">CONNECT</a></div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('image/residence/house-1.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('image/residence/house-2.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('image/residence/house-3.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('image/residence/house-4.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('image/residence/house-5.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('image/residence/house-6.jpg');"></div>
+      </div>
+    </div>
+
+    <div class="hero-overlay">
+      <h1>Welcome to Crown Estate Services</h1>
+       <p>Crown Estate Services delivers luxury property management with precision and discretion—because in true elegance, every detail matters.</p>
+    </div>
+  </section>
+
+<!-- Mission section -->
+
+<section class="mission-section" id="mission">
+  <div class="container mission-inner">
+    <div class="mission-text">
+      <h2>Our Mission</h2>
+      <p>
+        We believe in providing exceptional service through meticulous care, expert oversight and personalized attention.  We are dedicated to preserving the beauty, value, and integrity of every property we serve, while upholding the highest standards of discretion, trust and excellence. 
+      </p>
+    </div>
+    <div class="mission-image">
+      <img src="image/pexels-njeromin-11542516.jpg" alt="Luxury Villa" />
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About section -->
+
+<section class="people-section" id="team">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p class="section-subtitle"> With decades of experience in estate and ranch management, construction oversight, and landscape architecture, our team is passionate about delivering excellence at every stage.  Whether you are looking to enhance, restore or build on your property, Crown Estate Services brings unmatched expertise in managing and developing properties in Central Texas and the broader United States.  We understand the intricacies of estate ownership and provide tailored solutions that align with your vision and the land’s potential.  </p>
+
+  </div>
+</section>
+
+
+<!-- service section -->
+<section class="services-section" id="service">
+  <div class="container">
+    <div class="services-header">
+      <h2>Our Signature Services</h2>
+      <p>
+        With over 50 years of combined expertise, Crown Estate Services is dedicated to serving HNW and UHNW families with seamless estate operations, personal concierge solutions, and white-glove estate management. Our approach is tailored, discreet, and detail-obsessed.
+      </p>
+    </div>
+
+    <div class="services-cards">
+      <div class="service-card">
+        <h3>Estate & Ranch Management Services</h3>
+        <p>Our goal is to ensure your property operates seamlessly with dedicated attention to your unique needs and that of your estate.</p>
+        <ul>
+          <li>Property Maintenance & Enhancement</li>
+          <li>Seasonal & Special Event Management</li>
+          <li>Wildlife & Land Conservation</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Construction Management Crown Estate Services </h3>
+        <p>provides turnkey construction management services, overseeing every aspect from concept to completion.</p>
+        <ul>
+          <li>Project Planning & Feasibility Studies</li>
+          <li>Contractor & Vendor Management</li>
+          <li>Budgeting & Cost Control</li>
+          <li>Site Supervision & Quality Control</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Inventory & Estate Planning</h3>
+        <p>We create order around your assets: from relocation to acquisition, we ensure every detail is tracked and respected.</p>
+        <ul>
+          <li>Inventory management</li>
+          <li>Relocation support</li>
+          <li>Market analysis & property scouting</li>
+          <li>Asset tracking & strategy</li>
+        </ul>
+      </div>
+
+     
+    </div>
+
+    <div class="services-footer">
+      <p>We invite you to explore our service suite and discover how Crown Estate Services can enhance your quality of life.</p>
+    </div>
+  </div>
+</section>
+
+<!-- why choose us section -->
+
+
+<section class="choose-us-section" id="why-chose-us">
+  <div class="container">
+    <div class="choose-header">
+      <h2>Why Choose Us</h2>
+      <p class="choose-intro">
+        Experience & Expertise-With an established record of managing high-end properties and large-scale ranches, we provide the expertise needed to handle the complex requirements of estate and ranch ownership.
+        Obsessive Attention to Detail- From ensuring that every lightbulb is the right hue and brightness to making sure the landscaping is sculpted perfectly, we approach each detail with a meticulous eye. We know that luxury is found in the finishing touches that elevate a property from a place to live to a place to love.
+      </p>
+    </div>
+
+    <div class="choose-grid">
+      <div class="choose-item">
+        <h3>Proactive Anticipation</h3>
+        <p>We don’t wait for things to go wrong. Our proactive approach means we inspect, check, and double-check every aspect of your property to identify potential issues before they arise, ensuring uninterrupted comfort and peace of mind. Our clients choose us because they know we leave nothing to chance.</p>
+      </div>
+
+      <div class="choose-item">
+        <h3>Client-Focused Approach</h3>
+        <p>Our clients’ vision is at the heart of everything we do. We take the time to understand your unique needs and work collaboratively to bring your goals to life. </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- connect section -->
+
+<section class="connect-section" id="connect">
+  <div class="container connect-container">
+    <div class="connect-text">
+      <h2>Connect</h2>
+      <p>
+       Luxury is in the Details – Effortless Living, Elevated
+     At <strong>Crown Estate Services</strong>, we believe true luxury lies in the details. We don’t just maintain your property; we perfect it. Every service we offer is centered around providing the highest level of care, anticipating your needs, and refining the details that make your home truly special.
+     Contact us today and see how our luxury property management services can give you peace of mind, knowing that every detail is expertly managed.
+      </p>
+      <p class="contact-info">
+        📧 <a href="mailto:tammy@crownestateservices.com">tammy@crownestateservices.com</a><br>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+ <!-- footer section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Logo & Address -->
+    <div class="footer-col">
+      <img src="image/logo-removebg-preview.png" alt="Walker Luxury Logo" class="footer-logo">
+      
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li> <a href="#mission">Mission</a></li>
+        <li><a href="#team">About</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#why-chose-us">Why Choose Us</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-col">
+      <h4>Address</h4>
+      <h3>Crown Estate Services</h3>
+      <p>PO Box 163065<br>Austin, TX 78716<br>512-501-3580</p>
+       <div>
+        <p>Connect:</p>
+        <p class="contact-info">
+        📧 <a href="mailto:tammy@crownestateservices.com">tammy@crownestateservices.com</a><br>
+      </p>
+       </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© Copyright 2025
+      <a href="index.html">Crown Estate Services</a></p>
+    <p><a href="#">Website Accessibility Policy</a> |
+      <a href="#">Privacy Policy</a> |
+    <p>Website managed by <a href="https://ansarul-trigger.github.io/CodeByAnsarul/">CodeByAnsarul</a></p>
+    <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+  </div>
+</footer>
+
+<!-- scroll-top button -->
+<button id="scrollToTopBtn" title="Back to top">↑</button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+
+<!-- jQuery + Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(function(){
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 30,
+      autoplay: true,
+      autoplayTimeout: 6000,
+      autoplayHoverPause: true,
+      nav: true,
+      dots: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        1024: { items: 3 }
+      }
+    });
+  });
+</script>
+
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+ <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleSubmenu(el) {
+      const submenu = el.nextElementSibling;
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
