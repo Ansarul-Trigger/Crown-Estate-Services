@@ -49,20 +49,20 @@
     }
 
     .main-header {
-      background-color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 30px;
-    }
-
-    .logo {
-  transition: transform 0.3s ease, padding 0.3s ease;
   display: flex;
   align-items: center;
-  height: 60px; /* Controls header height */
-}
+  justify-content: space-between;
+  background-color: #000;
+  padding: 40px 30px;
+  position: relative;
+    }
 
+   .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
 .logo img {
   height: 100%;
   max-height: 60px;
@@ -74,6 +74,17 @@
 .shrink .logo img {
   transform: scale(0.85);
 }
+
+.nav-desktop {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+
+
 
 .nav-desktop a{
   text-decoration: none;
@@ -93,6 +104,8 @@
   .shrink .logo img {
     transform: scale(0.8);
   }
+
+
 }
 
 
@@ -175,12 +188,26 @@
       }
 
       .main-header {
-        padding: 14px 20px;
+        padding: 30px 20px;
+        position: relative;
+        justify-content: center;
       }
 
-      .logo {
-        font-size: 22px;
+    .logo {
+      font-size: 22px;
+      position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
+       z-index: 1;
       }
+
+    .mobile-icons {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+  }
     }
 
 
@@ -188,10 +215,14 @@
 
 
     .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      margin-top: -166px;
+       position: relative;
+  min-height: 100vh; /* Let content expand if needed */
+  overflow: hidden;
+  padding-top: -166px; /* Instead of negative margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
     }
     .swiper {
       width: 100%;
@@ -213,11 +244,11 @@
       z-index: 10;
       animation: fadeInUp 1.5s ease-out;
       background-color: rgba(0,0,0,0.5);
-      padding: 30px 30px 30px 30px;
+      padding: 50px 50px 50px 50px;
     }
     .hero-overlay h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 50px;
+      font-size: 60px;
       line-height: 50px;
       margin-bottom: 15px;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
@@ -264,6 +295,67 @@
       padding: 10px;
       cursor: pointer;
     }
+
+ /* Position mobile icons top-right */
+.mobile-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+  gap: 15px;
+  font-size: 20px;
+  color: #fff;
+  z-index: 999;
+}
+
+/* Show icons only on mobile */
+@media (max-width: 768px) {
+  .mobile-icons {
+    display: flex;
+  }
+
+  .hero {
+      position: relative;
+      overflow: hidden;
+      margin-top: -166px;
+    }
+
+    .swiper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  min-height: 150vh;
+  width: 100%;
+}
+
+.hero-overlay {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 10;
+      animation: fadeInUp 1.5s ease-out;
+      background-color: rgba(0,0,0,0.5);
+      padding: 50px 50px 50px 50px;
+    }
+}
+
+/* Logo inside hero-overlay */
+.hero-logo {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+
+
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -287,6 +379,11 @@
       .booking-box { flex-direction: column; align-items: stretch; }
       .booking-box input, .jump-input, .booking-box button, .search-icon {
         width: 100%;
+      }
+      .hero-overlay{
+        line-height: 30px;
+        width: 100%;
+        margin-top: 80px;
       }
     }
     @media (max-width: 480px) {
@@ -403,6 +500,9 @@
   font-size: 18px;
   color: #ffffff;
   margin-bottom: 50px;
+  padding: 0px 500px;
+  text-align: center;
+  line-height: 30px;
 }
 
 .people-grid {
@@ -450,6 +550,20 @@
   font-size: 15px;
   color: #555;
   line-height: 1.5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+.section-subtitle {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  padding: 0px;
+  text-align: center;
+  line-height: 30px;
+}
+
 }
 
 
@@ -557,8 +671,6 @@
 }
 
 /* why choose us section */
-
-
 .choose-us-section {
   background: #000;
   padding: 100px 20px;
@@ -574,7 +686,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   color: #E6D5AB;
-  margin-bottom: 20px;
+
 }
 
 .choose-intro {
@@ -583,48 +695,70 @@
   line-height: 1.7;
 }
 
-.choose-grid {
+.choose-grid-graphic {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-top: 40px;
 }
 
-.choose-item {
-  background: #f9f9f9;
+.choose-card {
+  display: flex;
+  background: #fff;
   border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
-  animation: fadeIn 1s ease forwards;
-  opacity: 0;
 }
 
-.choose-item:hover {
+.choose-card:hover {
   transform: translateY(-5px);
 }
 
-.choose-item h3 {
-  font-size: 20px;
-  color: #e6d5ab;
-  margin-bottom: 12px;
+.choose-card img {
+  width: 40%;
+  object-fit: cover;
+  height: 100%;
 }
 
-.choose-item p {
+.choose-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.choose-text h3 {
+  font-size: 20px;
+  color: #e6d5ab;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.choose-text p {
   font-size: 15px;
-  color: #444;
+  color: #333;
   line-height: 1.6;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+/* Responsive */
+@media (max-width: 992px) {
+  .choose-grid-graphic {
+    grid-template-columns: 1fr;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .choose-card {
+    flex-direction: column;
+  }
+
+  .choose-card img {
+    width: 100%;
+    height: 200px;
   }
 }
+
+
 
 /* What Our Guests Say */
 .testimonials-section {
@@ -805,7 +939,7 @@
 
 .footer-col h3 {
   font-family: 'Playfair Display', serif;
-  color: #fff;
+  color: #e6d5ab;
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -936,20 +1070,15 @@
   opacity: 1;
 }
 
-
   </style>
 </head>
 <body>
  
   
   <header class="sticky-header" id="header">
-    <div class="top-bar">
-      <i class="fas fa-phone"></i> 512-501-3580
-    </div>
-
     <div class="main-header">
       <div class="logo" id="logo">
-        <img src="image/logo-removebg-preview.png" alt="">
+       <a href="index.html"><img src="image/logo-removebg-preview.png" alt="Crown Estate Services"></a> 
       </div>
 
       <div class="nav-desktop">
@@ -1009,10 +1138,10 @@
     </div>
   </div>
 
+  <!-- hero -->
   <section class="hero">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url('image/residence/house-1.jpg');"></div>
         <div class="swiper-slide" style="background-image: url('image/residence/house-2.jpg');"></div>
         <div class="swiper-slide" style="background-image: url('image/residence/house-3.jpg');"></div>
         <div class="swiper-slide" style="background-image: url('image/residence/house-4.jpg');"></div>
@@ -1022,8 +1151,10 @@
     </div>
 
     <div class="hero-overlay">
-      <h1>Welcome to Crown Estate Services</h1>
-       <p>Crown Estate Services delivers luxury property management with precision and discretion—because in true elegance, every detail matters.</p>
+      <h1>Welcome! to Crown Estate Services</h1>
+        <img src="image/logo-removebg-preview.png" alt="Crown Estate Services Logo" class="hero-logo" />
+       <p>Exceptional Property Management, Tailored to You</p>
+       <p>For discerning individuals, a home is not just a space; it’s a reflection of a lifestyle where comfort and excellence intertwine. At Crown Estate Services, we specialize in luxury property management designed for high-net-worth individuals who value precision, time, and peace of mind. Our philosophy is simple: details matter.</p>
     </div>
   </section>
 
@@ -1038,7 +1169,7 @@
       </p>
     </div>
     <div class="mission-image">
-      <img src="image/pexels-njeromin-11542516.jpg" alt="Luxury Villa" />
+      <img src="image/toa-heftiba-FV3GConVSss-unsplash.jpg" alt="Luxury Villa" />
     </div>
   </div>
 </section>
@@ -1061,14 +1192,11 @@
   <div class="container">
     <div class="services-header">
       <h2>Our Signature Services</h2>
-      <p>
-        With over 50 years of combined expertise, Crown Estate Services is dedicated to serving HNW and UHNW families with seamless estate operations, personal concierge solutions, and white-glove estate management. Our approach is tailored, discreet, and detail-obsessed.
-      </p>
     </div>
 
     <div class="services-cards">
       <div class="service-card">
-        <h3>Estate & Ranch Management Services</h3>
+        <h3>Estate & Ranch Management</h3>
         <p>Our goal is to ensure your property operates seamlessly with dedicated attention to your unique needs and that of your estate.</p>
         <ul>
           <li>Property Maintenance & Enhancement</li>
@@ -1078,8 +1206,8 @@
       </div>
 
       <div class="service-card">
-        <h3>Construction Management Crown Estate Services </h3>
-        <p>provides turnkey construction management services, overseeing every aspect from concept to completion.</p>
+        <h3>Construction Management</h3>
+        <p> Crown Estate Services provides turnkey construction management services, overseeing every aspect from concept to completion.</p>
         <ul>
           <li>Project Planning & Feasibility Studies</li>
           <li>Contractor & Vendor Management</li>
@@ -1109,32 +1237,51 @@
 </section>
 
 <!-- why choose us section -->
-
-
 <section class="choose-us-section" id="why-chose-us">
   <div class="container">
     <div class="choose-header">
       <h2>Why Choose Us</h2>
-      <p class="choose-intro">
-        Experience & Expertise-With an established record of managing high-end properties and large-scale ranches, we provide the expertise needed to handle the complex requirements of estate and ranch ownership.
-        Obsessive Attention to Detail- From ensuring that every lightbulb is the right hue and brightness to making sure the landscaping is sculpted perfectly, we approach each detail with a meticulous eye. We know that luxury is found in the finishing touches that elevate a property from a place to live to a place to love.
-      </p>
     </div>
 
-    <div class="choose-grid">
-      <div class="choose-item">
-        <h3>Proactive Anticipation</h3>
-        <p>We don’t wait for things to go wrong. Our proactive approach means we inspect, check, and double-check every aspect of your property to identify potential issues before they arise, ensuring uninterrupted comfort and peace of mind. Our clients choose us because they know we leave nothing to chance.</p>
+    <div class="choose-grid-graphic">
+
+      <div class="choose-card">
+        <img src="image/why-image/Proactive Anticipation.jpeg" alt="Proactive Anticipation">
+        <div class="choose-text">
+          <h3>Obsessive Attention to Detail</h3>
+          <p>
+From ensuring that every lightbulb is the right hue and brightness to making sure the landscaping is sculpted perfectly, we approach each detail with a meticulous eye. We know that luxury is found in the finishing touches that elevate a property from a place to live to a place to love.</p>
+        </div>
       </div>
 
-      <div class="choose-item">
-        <h3>Client-Focused Approach</h3>
-        <p>Our clients’ vision is at the heart of everything we do. We take the time to understand your unique needs and work collaboratively to bring your goals to life. </p>
+      <div class="choose-card">
+        <img src="image/why-image/Client-Focused Approach.jpg" alt="Client-Focused Approach">
+        <div class="choose-text">
+          <h3>Client-Focused Approach</h3>
+          <p>Our clients’ vision is at the heart of everything we do. We take the time to understand your unique needs and work collaboratively to bring your goals to life. </p>
+        </div>
+      </div>
+
+      <div class="choose-card">
+        <img src="image/why-image/Obsessive Attention to Detail.jpeg" alt="Obsessive Attention to Detail">
+        <div class="choose-text">
+          <h3>Proactive Anticipation</h3>
+          <p>We don’t wait for things to go wrong. Our proactive approach means we inspect, check, and double-check every aspect of your property to identify potential issues before they arise, ensuring uninterrupted comfort and peace of mind. Our clients choose us because they know we leave nothing to chance.</p>
+        </div>
+      </div>
+
+      <div class="choose-card">
+        <img src="image/why-image/Expertise & Experience.jpeg" alt="Expertise & Experience">
+        <div class="choose-text">
+          <h3>Expertise & Experience</h3>
+          <p>With an established record of managing high-end properties and large-scale ranches, we provide the expertise needed to handle the complex requirements of estate and ranch ownership.</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <!-- connect section -->
 
@@ -1143,13 +1290,13 @@
     <div class="connect-text">
       <h2>Connect</h2>
       <p>
-       Luxury is in the Details – Effortless Living, Elevated
-     At <strong>Crown Estate Services</strong>, we believe true luxury lies in the details. We don’t just maintain your property; we perfect it. Every service we offer is centered around providing the highest level of care, anticipating your needs, and refining the details that make your home truly special.
-     Contact us today and see how our luxury property management services can give you peace of mind, knowing that every detail is expertly managed.
+      At Crown Estate Services, we believe true luxury lies in the details. We don’t just maintain your property; we perfect it. Every service we offer is centered around providing the highest level of care, anticipating your needs, and refining the details that make your home truly special.
       </p>
       <p class="contact-info">
         📧 <a href="mailto:tammy@crownestateservices.com">tammy@crownestateservices.com</a><br>
-      </p>
+      </p><br>
+
+      <p>Contact us today and see how our luxury property management services can give you peace of mind, knowing that every detail is expertly managed.</p>
     </div>
 
   </div>
@@ -1161,8 +1308,7 @@
     
     <!-- Logo & Address -->
     <div class="footer-col">
-      <img src="image/logo-removebg-preview.png" alt="Walker Luxury Logo" class="footer-logo">
-      
+      <a href="index.html"> <img src="image/logo-removebg-preview.png" alt="Crown Estate Services" class="footer-logo"></a>  
     </div>
 
     <!-- Quick Links -->
@@ -1180,9 +1326,7 @@
 
     <!-- Address -->
     <div class="footer-col">
-      <h4>Address</h4>
-      <h3>Crown Estate Services</h3>
-      <p>PO Box 163065<br>Austin, TX 78716<br>512-501-3580</p>
+      <h3 class="crown-text">Crown Estate Services</h3>     
        <div>
         <p>Connect:</p>
         <p class="contact-info">
@@ -1274,9 +1418,9 @@
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
-        header.classList.add('shrink');
+        header.classList.add('');
       } else {
-        header.classList.remove('shrink');
+        header.classList.remove('');
       }
     });
 
